@@ -1,32 +1,43 @@
-# React + TypeScript + Vite
+# Topic別チャットアプリ
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 + TypeScript + Firebase + Tailwind CSS v4 を使用して開発したリアルタイムチャットアプリです。
 
-Currently, two official plugins are available:
+## デモ
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://YOUR_PROJECT.web.app
 
-## React Compiler
+## 使用技術
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Firebase Authentication
+- Cloud Firestore
+- Tailwind CSS v4
+- Vite
 
-## Expanding the Oxlint configuration
+## 主な機能
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- メールアドレスログイン
+- 新規ユーザー登録
+- 匿名ログイン
+- Topic作成
+- Topic一覧
+- リアルタイムチャット
+- メッセージ編集
+- メッセージ削除
+- レスポンシブデザイン
+- モバイルサイドバー
+- Firebase Hosting
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## セットアップ
+
+```bash
+git clone <repository>
+npm install
+cp .env.example .env
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## スクリーンショット
+
+（公開後に画像を追加）

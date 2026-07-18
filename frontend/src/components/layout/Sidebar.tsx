@@ -91,8 +91,13 @@ export default function Sidebar({
             ">
                 <TopicList
                     topics={topics}
-                    onSelect={onSelect}
                     mobile={mobile}
+                        onSelect={(topic) => {
+                            onSelect(topic);
+                            if (mobile) {
+                                closeSidebar();
+                            }
+                        }}
                 />
             </div>
             <div className="border-t border-gray-700 p-4 shrink-0">

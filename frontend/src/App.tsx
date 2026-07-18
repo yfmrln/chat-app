@@ -4,10 +4,10 @@ import Register from "./pages/Register";
 import Chat from "./pages/Chat";
 import ProtectedRoute from "./components/ProtectedRoute";
 import {useAuth} from "./hooks/useAuth";
-import { useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase/firebase";
-import { useAuthStore } from "./store/authStore";
+// import { useEffect } from "react";
+// import { onAuthStateChanged } from "firebase/auth";
+// import { auth } from "./firebase/firebase";
+// import { useAuthStore } from "./store/authStore";
 
 
 function App(){
