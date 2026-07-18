@@ -1,14 +1,19 @@
-import type { Topic } from "../types/topic";
+import { useLayoutStore } from "../../store/layoutStore";
+import type { Topic } from "../../types/topic";
 
 interface Props{
     topics:Topic[];
     onSelect:(topic:Topic)=>void;
+    mobile?:boolean;
 }
 
 export default function TopicList({
     topics,
-    onSelect
+    onSelect,
+    mobile
 }:Props){
+
+    const closeSidebar = useLayoutStore( state=>state.closeSidebar );
 
     return (
         <div className="space-y-1">
@@ -16,7 +21,7 @@ export default function TopicList({
                 topics.map(topic=>(
                 <button
                     key={topic.id}
-                    onClick={()=>onSelect(topic)}
+                    onClick={() => { onSelect(topic); if (mobile) {closeSidebar(); } }}
                     className="
                         w-full
                         text-left
