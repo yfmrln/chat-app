@@ -5,7 +5,7 @@
 必須
 
 - strict
-- any禁止
+<!-- - any禁止 -->
 - unknown優先
 - import type を利用
 - Interfaceを優先
